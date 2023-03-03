@@ -6,6 +6,13 @@ introduction = "maven 换源工具" # 模块介绍
 
 # 镜像源列表
 sources = [
+    '阿里云公共仓库',
+    '阿里云仓库+中心仓库',
+    '还原'
+]
+
+
+sources_list = [
     '''</mirrors>
             <mirror>
                 <id>aliyunmaven</id>
@@ -42,12 +49,11 @@ sources = [
 
 # 镜像信息
 def use_mirror(index):
-    print("选择maven的安装方式：")
-    print("1、idea安装")
-    print("2、自行安装")
-    choose = int(input('请输入工具前的序号: ')) 
+    print("选择操作系统：")
+    print("1、windows")
+    print("2、Linux")
+    choose = int(input('请输入系统的序号: ')) 
     choose = choose - 1 
-    print(choose)
     if choose > 1:
         print("请选择有效的途径")
         exit(-1)
@@ -67,7 +73,7 @@ def terminal(index):
     os.system("chmod 777  "+path)
     a = os.popen('cat '+ path )
     conf = a.read()
-    result = re.sub(pattern='<mirrors.*?>(.|\n)*?</mirrors>',string=conf,repl=sources[index])
+    result = re.sub(pattern='<mirrors.*?>(.|\n)*?</mirrors>',string=conf,repl=sources_list[index])
     path = path.strip()
     print (path)
     f = open(path, "w")
