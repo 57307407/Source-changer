@@ -12,6 +12,12 @@ sources = [
 
 # 镜像信息
 def use_mirror(index):
-    os.system('npm config set registry={0}'.format(sources[index]))
+    tool_name = input('请输入您要使用的工具(npm、yarn、pnpm):')
+    if tool_name not in ['npm', 'yarn', 'pnpm']:
+        print('not support this tool: ', tool_name)
+        print('不支持当前工具: ', tool_name)
+        return
+    print(tool_name)
+    os.system('{0} config set registry {1}'.format(tool_name, sources[index]))
     print('本工具将对 electron 进行换源')
-    os.system('npm config set electron_mirror "{0}"electron/'.format(sources[index]))
+    os.system('{0} config set ELECTRON_MIRROR "{1}"electron/'.format(tool_name, sources[index]))
