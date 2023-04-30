@@ -5,10 +5,11 @@ import modules
 # print introduction
 print()
 print("{:=^40}".format(' 快速换源工具，减少搜索工具的时间 '))
+print("{:=^40}".format(' Quickly switch the mirror tool to save the time on the browser '))
 print()
 
-# load soft list
-
+# load the module(tools) list
+# 获取模块(工具)列表
 support_modules = []
 
 for filefiner, name, ispkg in pkgutil.iter_modules(modules.__path__):
@@ -52,7 +53,8 @@ print("请在下面的镜像源中选择一个: ")
 for i, source in enumerate(selected_module.sources, start=1):
     print('{0}: {1}'.format(i, source))
 
-# # get index
+# get the index of mirror
+# 获取镜像的索引
 index = input('请输入镜像前的序号: ')
 index = int(index) - 1
 
