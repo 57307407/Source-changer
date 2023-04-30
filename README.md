@@ -24,7 +24,7 @@
 
 出现python版本号即为安装完毕
 
-![python版本](img\python版本.png)
+![python版本](https://raw.githubusercontent.com/57307407/Source-changer/main/img/python版本.png)
 
 ## 使用
 
@@ -34,13 +34,13 @@
 >
 > 即： sudo  python3 main.py
 
-![Source-changer_主页面](img\Source-changer_主页面.png)
+![Source-changer_主页面](https://raw.githubusercontent.com/57307407/Source-changer/main/img/Source-changer_主页面.png)
 
 选择需换源的软件
 
-![Source-changer_软件选择](img\Source-changer_软件选择.png)
+![Source-changer_软件选择](https://raw.githubusercontent.com/57307407/Source-changer/main/img/Source-changer_软件选择.png)
 
 选择更换的镜像
 
-![Source-changer_镜像选择](img\Source-changer_镜像选择.png)
+![Source-changer_镜像选择](https://raw.githubusercontent.com/57307407/Source-changer/main/img/Source-changer_镜像选择.png)
 
