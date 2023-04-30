@@ -57,4 +57,3 @@ index = input('请输入镜像前的序号: ')
 index = int(index) - 1
 
 selected_module.use_mirror(index)
-

@@ -47,24 +47,24 @@ sources_list = [
         '''
 ]
 
-# 镜像信息
+# # 镜像信息
+# def use_mirror(index):
+#     print("选择操作系统：")
+#     print("1、windows")
+#     print("2、Linux")
+#     choose = int(input('请输入系统的序号: ')) 
+#     choose = choose - 1 
+#     if choose > 1:
+#         print("请选择有效的途径")
+#         exit(-1)
+#     if choose == 0:
+#         print("idea")
+
+#     if choose == 1:
+#         terminal(index)
+
+
 def use_mirror(index):
-    print("选择操作系统：")
-    print("1、windows")
-    print("2、Linux")
-    choose = int(input('请输入系统的序号: ')) 
-    choose = choose - 1 
-    if choose > 1:
-        print("请选择有效的途径")
-        exit(-1)
-    if choose == 0:
-        print("idea")
-
-    if choose == 1:
-        terminal(index)
-
-
-def terminal(index):
     a = os.popen('mvn -v')
     path = a.read()
     begin = path.find("Maven home:") + 11
